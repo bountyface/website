@@ -1,0 +1,9 @@
+<div class="flex w-screen bg-black">
+  @for (item of navigationItems; track $index) {
+  <a
+    class="text-white text-2xl p-3 hover:bg-sky-50 hover:text-black"
+    [routerLink]="item.routerLink"
+    >{{ item.label }}</a
+  >
+  }
+</div>
