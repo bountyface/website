@@ -1,2 +1,7 @@
-<app-navigation-bar [navigationItems]="navigationItems"></app-navigation-bar>
-<router-outlet />
+<div class="flex flex-col h-screen">
+  <app-navigation-bar [navigationItems]="navigationItems"></app-navigation-bar>
+  <div class="h-full">
+    <router-outlet />
+    <app-footer></app-footer>
+  </div>
+</div>
