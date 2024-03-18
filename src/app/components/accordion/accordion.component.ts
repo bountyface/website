@@ -6,7 +6,7 @@ import {
   trigger,
 } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
@@ -34,6 +34,8 @@ import { Component } from '@angular/core';
   ],
 })
 export class AccordionComponent {
+  @Input() public header = '';
+  @Input() public image = '';
   isOpen = false;
   public onAccordionClick(): void {
     this.isOpen = !this.isOpen;

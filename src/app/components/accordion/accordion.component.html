@@ -1,9 +1,9 @@
 <div
-  class="accordion"
+  class="accordion h-145"
   [ngClass]="{ active: isOpen }"
   (click)="onAccordionClick()"
 >
-  Section 1
+  <img [src]="image" alt="Italian Trulli" class="p-2" style="height: inherit" />
 </div>
 
 <div [@openClose]="isOpen ? 'open' : 'closed'" class="panel">
