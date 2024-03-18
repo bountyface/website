@@ -1,0 +1,11 @@
+<div
+  class="accordion"
+  [ngClass]="{ active: isOpen }"
+  (click)="onAccordionClick()"
+>
+  Section 1
+</div>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="panel">
+  <ng-content></ng-content>
+</div>
