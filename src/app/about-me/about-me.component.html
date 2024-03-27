@@ -1,15 +1,24 @@
-<div class="bg-slate-600 h-full p-5 rounded-md shadow-2xl">
-  <div class="text-xl text-white">Hi my name is Michi...</div>
+<div class="bg-slate-600 h-full p-5 rounded-md shadow-2xl overflow-auto">
+  <div class="text-2xl text-white">Hi my name is Michi...</div>
   <div class="text-white">
-    ...and welcome to my personal website. I'm a developer from Ilmenau with
-    many interests. This is my stack:
+    ...and welcome to my personal website. I'm a developer and musician from
+    Ilmenau with many interests. This is my stack:
   </div>
+  <div class="text-xl text-white">WebDev</div>
   <div>
     @for (stackInfo of stackInfos; track $index) {
     <app-accordion [image]="stackInfo.imageUrl">
       {{ stackInfo.text }}
     </app-accordion>
     }
-    <div>WebDev</div>
   </div>
+  <!-- <div class="text-xl text-white">WebDev</div>
+  <div>
+    @for (stackInfo of stackInfos; track $index) {
+    <app-accordion [image]="stackInfo.imageUrl">
+      {{ stackInfo.text }}
+    </app-accordion>
+    }
+  </div> -->
+  <div class="text-xl text-white">Audio</div>
 </div>
