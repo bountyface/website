@@ -6,19 +6,18 @@
   </div>
   <div class="text-xl text-white">WebDev</div>
   <div>
-    @for (stackInfo of stackInfos; track $index) {
+    @for (stackInfo of webDevStackInfos; track $index) {
     <app-accordion [image]="stackInfo.imageUrl">
       {{ stackInfo.text }}
     </app-accordion>
     }
   </div>
-  <!-- <div class="text-xl text-white">WebDev</div>
+  <div class="text-xl text-white">Audio</div>
   <div>
-    @for (stackInfo of stackInfos; track $index) {
+    @for (stackInfo of audioStackInfos; track $index) {
     <app-accordion [image]="stackInfo.imageUrl">
       {{ stackInfo.text }}
     </app-accordion>
     }
-  </div> -->
-  <div class="text-xl text-white">Audio</div>
+  </div>
 </div>
