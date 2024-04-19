@@ -13,6 +13,12 @@ export const WEB_DEV_STACK: IStackInfo[] = [
     text: 'Type safety, even if it is not a real one like in TypeScript, has a huge impact to the quality of your code. It is easier to read, to maintain and prevents you from a lot of unnecessary mistakes. Working with TypeScript for years made plain JavaScript look very dirty to me. Now I cannot go back...',
   },
   {
+    imageUrl:
+      'https://i0.wp.com/www.primefaces.org/wp-content/uploads/2018/05/primeng-logo.png?fit=1000%2C1000&ssl=1&w=640',
+    header: 'PrimeNG',
+    text: 'When creating modern Web-Apps you do not want to start from scratch every time. PrimeNG is a component library for Angular that satisfies not only your basic needs, but the advanced ones too. It is easy to setup, has an active community and serves lots of customization options through templating.',
+  },
+  {
     imageUrl: 'https://nestjs.com/logo-small.ede75a6b.svg',
     header: 'NestJS',
     text: 'NestJS is like Angular for the backend. It has a very similar structure and also follows the approach of a toolbox. It is easy to implement REST or GraphQL endpoints plus your validation. It is a great choice if you want to stay in the node eco system.',
@@ -31,13 +37,13 @@ export const WEB_DEV_STACK: IStackInfo[] = [
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/120px-Docker_logo.svg.png',
     header: 'Docker',
-    text: 'I have evaluated many frameworks and tools for a Microservice Architecture. Docker saved me from a lot of pain in that process. It allows me to setup and destroy any software/tool/framework quickly without having to care about dependencies. Containers are easy to maintain through the VS-Code Extension.',
+    text: 'I have evaluated many frameworks and tools for a Microservice Architecture. Docker saved me from a lot of pain in that process. It allows me to setup and destroy any software/tool/framework quickly without having to care about dependencies. Containers are easy to manage through the VS-Code extension.',
   },
   {
     imageUrl:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/GitLab_logo_%282%29.svg/150px-GitLab_logo_%282%29.svg.png',
     header: 'GitLab',
-    text: 'Using Git for version control is essential for any project. Using the right tools around Git is the key to create robust and reliable results. The process of reviewing merge-requests has never been easier with GitLab. Also you can create pipelines to further improve your code quality. May it be automated tests, linting or code code-safety analytics with SonarLint.',
+    text: 'Using Git for version control is essential for any project. Using the right tools around Git is the key to create robust and reliable results when working in a team. The process of reviewing merge-requests has never been easier with GitLab. Also you can create pipelines to further improve your code quality. May it be automated tests, linting or code code-safety analytics with SonarLint.',
   },
   {
     imageUrl:
