@@ -8,7 +8,7 @@
   <div>
     @for (stackInfo of webDevStackInfos; track $index) {
     <app-accordion [image]="stackInfo.imageUrl">
-      {{ stackInfo.text }}
+      <markdown [data]="stackInfo.text"></markdown>
     </app-accordion>
     }
   </div>
@@ -16,7 +16,7 @@
   <div>
     @for (stackInfo of audioStackInfos; track $index) {
     <app-accordion [image]="stackInfo.imageUrl">
-      {{ stackInfo.text }}
+      <markdown [data]="stackInfo.text"></markdown>
     </app-accordion>
     }
   </div>
