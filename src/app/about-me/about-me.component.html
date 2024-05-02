@@ -4,18 +4,44 @@
     ...and welcome to my personal website. I'm a developer and musician from
     Ilmenau with many interests. This is my stack:
   </div>
-  <div class="text-xl text-white pb-3 pt-3">WebDev</div>
+  <div class="flex flex-row items-center">
+    <div class="text-xl text-white pb-3 pt-3 pr-2">WebDev</div>
+    <fa-icon
+      *ngIf="shouldShowIcon"
+      class="cursor-pointer"
+      size="lg"
+      [icon]="toggleIcon"
+      (click)="toggleAccordions()"
+    ></fa-icon>
+  </div>
   <div>
     @for (stackInfo of webDevStackInfos; track $index) {
-    <app-accordion [image]="stackInfo.imageUrl">
+    <app-accordion
+      [image]="stackInfo.imageUrl"
+      [closeAccordions$]="closeAccordions$"
+      (onAccordionToggle)="changeIcon($event)"
+    >
       <markdown [data]="stackInfo.text"></markdown>
     </app-accordion>
     }
   </div>
-  <div class="text-xl text-white pb-3 pt-3">Audio</div>
+  <div class="flex flex-row items-center">
+    <div class="text-xl text-white pb-3 pt-3 pr-2">Audio</div>
+    <fa-icon
+      *ngIf="shouldShowIcon"
+      class="cursor-pointer"
+      size="lg"
+      [icon]="toggleIcon"
+      (click)="toggleAccordions()"
+    ></fa-icon>
+  </div>
   <div>
     @for (stackInfo of audioStackInfos; track $index) {
-    <app-accordion [image]="stackInfo.imageUrl">
+    <app-accordion
+      [image]="stackInfo.imageUrl"
+      [closeAccordions$]="closeAccordions$"
+      (onAccordionToggle)="changeIcon($event)"
+    >
       <markdown [data]="stackInfo.text"></markdown>
     </app-accordion>
     }

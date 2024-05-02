@@ -6,7 +6,8 @@ import {
   trigger,
 } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-accordion',
@@ -33,11 +34,24 @@ import { Component, Input } from '@angular/core';
     ]),
   ],
 })
-export class AccordionComponent {
+export class AccordionComponent implements OnInit {
   @Input() public header = '';
   @Input() public image = '';
-  isOpen = false;
+  @Input() public closeAccordions$ = new Observable<void>();
+
+  @Output() public onAccordionToggle = new EventEmitter<boolean>();
+  public isOpen = false;
+
   public onAccordionClick(): void {
     this.isOpen = !this.isOpen;
+    this.onAccordionToggle.emit(this.isOpen);
+  }
+
+  ngOnInit(): void {
+    this.closeAccordions$.subscribe({
+      next: (value) => {
+        this.isOpen = false;
+      },
+    });
   }
 }
